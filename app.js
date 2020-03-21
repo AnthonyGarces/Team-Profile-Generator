@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Employee = require("./lib/Employee");
 
 function promptUser() {
     inquirer
@@ -24,6 +25,33 @@ function promptUser() {
             message: "What is the employee's role?",
             choices: ["Manager", "Engineer", "Intern"]
         }
-    ]).then(response => console.log(`${response.name}, ${response.email}, ${response.id}, ${response.role}`))}
+    ]).then(response => {
+        var newEmployee = new Employee(response.name, response.email, response.id);
+        var role = response.role;
+        switch (role) {
+            case 'Manager': 
+                managerQ(newEmployee.name, newEmployee.email, newEmployee.id);
+                break;
+            case 'Engineer': 
+                engineerQ(newEmployee.name, newEmployee.email, newEmployee.id);
+                break;
+            case 'Intern': 
+                internQ(newEmployee.name, newEmployee.email, newEmployee.id);
+                break;
+        };
+    })
+}
+
+function managerQ() {
+
+}
+
+function engineerQ() {
+
+}
+
+function internQ() {
+    
+}
 
 promptUser();
