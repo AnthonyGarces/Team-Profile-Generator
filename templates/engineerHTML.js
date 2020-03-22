@@ -7,7 +7,7 @@ function engineerInfo(engineer) {
         <div>
         <ul class: "list-group">
             <li class="list-group-item"> Email: ${engineer.getEmail()}</li>
-            <li class="list-group-item"> ID: ${engineer.getID()}</li>
+            <li class="list-group-item"> ID: ${engineer.getId()}</li>
             <li class="list-group-item"> Github: ${engineer.getGithub()}</li>
         </ul>
     </div>

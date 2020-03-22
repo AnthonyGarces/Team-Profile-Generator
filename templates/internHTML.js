@@ -7,7 +7,7 @@ function internInfo(intern) {
         <div>
         <ul class: "list-group">
             <li class="list-group-item"> Email: ${intern.getEmail()}</li>
-            <li class="list-group-item"> ID: ${intern.getID()}</li>
+            <li class="list-group-item"> ID: ${intern.getId()}</li>
             <li class="list-group-item"> School: ${intern.getSchool()}</li>
         </ul>
     </div>

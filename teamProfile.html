@@ -1,10 +1,4 @@
-const engineerInfo = require('./engineerHTML');
-const managerInfo = require('./managerHTML');
-const internInfo = require('./internHTML');
 
-function generateHTML(team) {
-    console.log(team);
-    return `
     <!doctype html>
     <html lang="en">
     <head>
@@ -19,16 +13,7 @@ function generateHTML(team) {
     </div>
         <div>
             <div class="row justify-content-center">
-            ${/*still not rendering correctly*/
-                team.forEach(emp => {
-                if(emp.getRole() === "Manager") {
-                    managerInfo(emp)
-                } else if (emp.getRole() === "Engineer") {
-                    engineerInfo(emp)
-                } else if (emp.role === "Intern") {
-                    internInfo(emp)
-                }
-            })}
+            undefined
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -36,9 +21,4 @@ function generateHTML(team) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
     </html>
-    `
-
-}
-
-module.exports = generateHTML;
- 
+    
